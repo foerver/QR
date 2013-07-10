@@ -1,0 +1,21 @@
+package
+{
+	import flash.display.Sprite;
+	
+	public class Square extends Sprite
+	{
+		public function Square(w:Number=200 ,h:Number=200,centerRegistration:Boolean=false,ellipseWidth:Number=0,ellipseHeight:Number=0 )
+		{
+			super();
+			this.graphics.beginFill(Math.random()*0xFFFFFF);
+			if(centerRegistration){
+				this.graphics.drawRoundRect(-w/2,-h/2,w,h,ellipseWidth,ellipseHeight);
+			}else{
+				this.graphics.drawRoundRect(0 ,0,w,h,20,20);
+			}
+			
+			this.graphics.endFill() ;
+		}
+	
+	}
+}
